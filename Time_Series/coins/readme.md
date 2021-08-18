@@ -5,7 +5,9 @@ containing the price of Bitcoin since 2013-04-29 and many other coins.
 
 To learn how to process the data please take a look at this [notebook][3] or its [original post][2].
 
-**Remark.** To run a github notebook replace `github` by `githubtocolab` in the corresponding link.
+**Remarks.**
+1. To run a github notebook replace `github` by `githubtocolab` in the corresponding link.
+2. To download the notebook from that webpage, I did log in to Deepnote (suggested at the top of the page) with my gmail (longtran) and then open and download it.
 
 
 [1]: https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory?select=coin_Bitcoin.csv
