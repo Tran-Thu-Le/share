@@ -1,4 +1,9 @@
-
+import torch 
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_theme() 
+from math import pi 
+import math
 
 class Ellipse:
 
