@@ -178,7 +178,7 @@ class Ellipse:
         delta = self.inner_product(a, g)/ (a_norm * g_norm)
 
         # check the conditions
-        if (delta1 > 1. +1e-7) or (delta2 < -1 - 1e-7) or (delta < -1. + 1e-7) or (delta > 1. +1e-7) or (delta1 > delta2):
+        if (delta1 > 1. +1e-7) or (delta2 < -1 - 1e-7) or (delta < -1. + 1e-7) or (delta > 1. +1e-7) or (delta1 > delta2+1e-7):
             raise Exception(f"Error in max_with_double_cutting_plane 182: Expect delta1={delta1} <= 1. delta2={delta2}>=-1 delta={delta} in [-1,1] and delta1<=delta2")
 
         # remove noise
