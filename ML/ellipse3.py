@@ -227,8 +227,11 @@ class Ellipse:
             F = cos_(delta, delta2)
             infor["case"] = "delta2<delta"
         else:
+            F =None
             infor["case"] = "error"
             raise Exception("Not implemented") 
+
+        infor["cos"]=F
 
 
         if get_infor==False:
