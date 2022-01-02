@@ -180,14 +180,16 @@ class Ellipse:
         g_norm = self.norm(g)
         a_norm = self.norm(a)
         beta = b + (a*c).sum()
+        
+        one_ = torch.tensor(1., dtype=torch.float64)
 
         if d1 == None:
-            delta1 = -1.
+            delta1 = -one_
         else:
             delta1 = (d1 - (g*c).sum())/g_norm 
 
         if d2 == None:
-            delta2 = 1.
+            delta2 = one_
         else:
             delta2 = (d2 - (g*c).sum())/g_norm        
          
@@ -203,9 +205,12 @@ class Ellipse:
 #         delta = delta.clip(min=-1., max=1.) 
 #         delta1 = max(delta1+1e-7, -1.+1e-7)
 #         delta2 = min(delta2-1e-7, 1.-1e-7)
-        delta1 = min(max(delta1, -1.+1e-7), 1.-1e-7) 
-        delta2 = min(max(delta2, -1.+1e-7), 1.-1e-7) 
-        delta = min(max(delta, -1.+1e-7), 1.-1e-7)  
+#         delta1 = min(max(delta1, -1.+1e-7), 1.-1e-7) 
+#         delta2 = min(max(delta2, -1.+1e-7), 1.-1e-7) 
+#         delta = min(max(delta, -1.+1e-7), 1.-1e-7)  
+        delta1 = delta1.clip(min=-1.+1e-7, max=1.-1e-7) 
+        delta2 = delta2.clip(min=-1.+1e-7, max=1.-1e-7) 
+        delta = delta.clip(min=-1.+1e-7, max=1.-1e-7) 
 
         infor = {
             "g_norm": g_norm,
