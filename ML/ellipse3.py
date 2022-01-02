@@ -192,9 +192,12 @@ class Ellipse:
             raise Exception(f"Error in max_with_double_cutting_plane 182: Expect delta1={delta1} <= 1. delta2={delta2}>=-1 delta={delta} in [-1,1] and delta1<=delta2")
 
         # remove noise
-        delta1 = delta1.clip(min=-1.) 
-        delta2 = delta2.clip(max=1.)
-        delta = delta.clip(min=-1., max=1.) 
+#         delta1 = delta1.clip(min=-1.) 
+#         delta2 = delta2.clip(max=1.)
+#         delta = delta.clip(min=-1., max=1.) 
+        delta1 = max(delta1, -1.)
+        delta2 = min(delta2, 1.
+        delta = min(max(delta1, -1.), 1.) 
 
         infor = {
             "g_norm": g_norm,
