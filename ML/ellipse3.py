@@ -92,6 +92,12 @@ class Ellipse:
         ip = self.inner_product(v, v)
         assert ip>=0.
         return ip.sqrt() 
+    
+    def get_alpha(self, g, level):
+        assert self.center.shape == g.shape
+        a = (g * self.center).sum() - level 
+        b = self.norm(g) 
+        return a/b 
 
 
 
