@@ -196,7 +196,7 @@ class Ellipse:
 #         delta2 = delta2.clip(max=1.)
 #         delta = delta.clip(min=-1., max=1.) 
         delta1 = max(delta1, -1.)
-        delta2 = min(delta2, 1.
+        delta2 = min(delta2, 1.)
         delta = min(max(delta1, -1.), 1.) 
 
         infor = {
