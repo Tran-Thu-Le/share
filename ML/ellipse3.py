@@ -197,7 +197,7 @@ class Ellipse:
 #         delta = delta.clip(min=-1., max=1.) 
         delta1 = max(delta1, -1.)
         delta2 = min(delta2, 1.)
-        delta = min(max(delta1, -1.), 1.) 
+        delta = min(max(delta, -1.), 1.) 
 
         infor = {
             "g_norm": g_norm,
