@@ -389,11 +389,11 @@ class Ellipse:
 
 
     # variants of one_plane_cut/radius_compression_cut              
-    def random_cut(self, atoms, lamb):
+    def random_cut(self, atoms, lamb, nb=10):
         ell = self 
-        n = atoms.shape[1]
+        n = atoms.shape[1] 
         rand_perm = torch.randperm(n)
-        for i in range(n):
+        for i in range(nb):
             k = rand_perm[i] 
             ell, _ = ell.one_plane_cut(atoms[:, [k]], lamb)  
         return ell 
