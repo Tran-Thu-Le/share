@@ -23,9 +23,10 @@ class Ellipse:
     
     # ATTRIBUTES 
     def eig(self):
-        eigs, vecs = torch.linalg.eig(self.matrix)
-        self.eigs = eigs.real
-        self.vecs = vecs.real
+        if self.eigs is None or self.vecs is None:
+            eigs, vecs = torch.linalg.eig(self.matrix)
+            self.eigs = eigs.real
+            self.vecs = vecs.real
 
     def mat_sqrt(self):
         """
