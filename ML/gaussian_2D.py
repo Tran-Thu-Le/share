@@ -148,7 +148,7 @@ def update_data(setup, data_pre=None):
         v = data_pre["v"][-1] + x*data_pre["a"][-1] 
 
     r = y-v 
-    p_val = 0.5*y_norm**2 + lbd*x_TV 
+    p_val = 0.5*r.norm()**2 + lbd*x_TV 
 
     # cert data
     cert = (atoms.T @ r).reshape(-1) 
