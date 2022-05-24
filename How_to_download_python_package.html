@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>deep_inv_opt</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="how-to-run-a-python-project-on-your-computer">How to run a python project on your computer?</h2>
+<p>Demo project:  <a href="https://github.com/yingcongtan/deep_inv_opt?fbclid=IwAR3_wGflQZjKXTUQHxZ6wkFqsofUOOhw1IfrbQJKRdmbubA6ixDCohahN40"><code>deep_inv_opt</code></a></p>
+<p>This documentation is for Linux user<br>
+(Remark: may use <code>ctrl+L</code> to clear the terminal if needed)</p>
+<p><strong>Part 1. download project</strong></p>
+<ul>
+<li>Create and enter the folder that we want to save the code</li>
+<li>Open terminal by right-click and choose “open terminal”</li>
+<li>Check whether python3, virtual environment, git, pip were installed in your computer or not<br>
+- <code>python3 --version</code><br>
+- <code>virtualenv --version</code><br>
+- <code>git --version</code><br>
+- <code>pip --version</code><br>
+- If everything was going well, continue! Otherwise, try to install it!</li>
+<li>Copy their project: <code>git clone https://github.com/yingcongtan/deep_inv_opt.git</code></li>
+</ul>
+<p><strong>Part 2. setup virtual environment</strong></p>
+<ul>
+<li>Enter the project: <code>cd deep_inv_opt</code></li>
+<li>Create virtual environment: <code>virtualenv venv -p python3</code></li>
+<li>Open virtual environment: <code>source venv/bin/activate</code>. Now you will see that a new word “(venv)” before the link of the current directory</li>
+</ul>
+<p><strong>Part 3. install python packages</strong></p>
+<ul>
+<li>Install some python packages required by deep_inv_opt project<br>
+- numpy (matrix vector calculation): <code>pip install numpy</code><br>
+- matplotlib (plots) <code>pip install matplotlib</code><br>
+- Pytorch (machine learning tools) <code>pip install torch</code><br>
+- ipython (to run jupyter notebook) <code>pip install ipython</code><br>
+- ipykernal (to run virtual jupyter notebook) <code>pip install ipykernel</code><br>
+- install deep_inv_opt: <code>pip install -e .</code></li>
+<li>(Optional) check the packages by <code>pip list</code></li>
+<li>Create virtualenv kernel for jupyter notebook <code>ipython kernel install --user --name=venv</code></li>
+<li>Open jupyter notebook: <code>jupyter notebook</code></li>
+<li>A window will pop up, browse to “examples” folder and then double click on the “Example 1 - Example 1 - Using deep_inv_opt with a single target point.ipynb”</li>
+<li>On tab kernel choose “change Kernel”, then “venv”</li>
+</ul>
+<p><strong>Part 4. rune code</strong></p>
+<ul>
+<li>Ob tab “Cell” choose “Run all” and enjoy the result (I hope)</li>
+</ul>
+</div>
+</body>
+
+</html>
