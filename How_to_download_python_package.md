@@ -11,6 +11,7 @@ This documentation is for Linux user
  * Open terminal by right-click and choose "open terminal"
  *  Check whether python3, virtual environment, git, pip were installed in your computer or not
 	 * `python3 --version`
+	 * `jupyter notebook --version`
 	 * `virtualenv --version`
 	 * `git --version`
 	 * `pip --version`
